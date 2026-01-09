@@ -13,6 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         //
         $middleware->alias([
+            'api.key' => \App\Http\Middleware\ApiKeyMiddleware::class,
             'is_admin' => \App\Http\Middleware\IsAdmin::class,
             'is_user' => \App\Http\Middleware\IsUser::class,
         ]);

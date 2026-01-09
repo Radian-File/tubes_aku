@@ -44,4 +44,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/orders/{order}', [ProductController::class, 'showOrder'])->name('user.orders.show');
     Route::put('/orders/{order}/complete', [ProductController::class, 'completeOrder'])->name('user.orders.complete');
   });
+
 });
